@@ -1,23 +1,10 @@
 import React, { useState } from "react";
-import {
-  Alert,
-  Keyboard,
-  KeyboardAvoidingView,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
-// import { DeleteBtn } from "./component/DeleteBtn/DeleteBtn";
+import { Alert, SafeAreaView, StyleSheet, View } from "react-native";
 import { Form } from "./component/Form/Form";
 import { TaskDone } from "./component/Task_redo/TaskDone";
 import { TaskUnDo } from "./component/Task_undo/TaskUnDo";
 
 function App() {
-  // const [task, setTask] = useState({});
   const [listItems, setListItems] = useState([]);
   console.log(listItems);
 
@@ -60,8 +47,8 @@ function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Tiêu đề */}
       <View style={styles.head}>
+        {/* list undo */}
         <TaskUnDo
           list={listItems}
           onDone={handleDone}
